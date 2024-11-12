@@ -1,0 +1,35 @@
+---
+title: "T-Tests"
+author: "Eleanor Harrison"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Individual Testing 
+
+```{r}
+field_1_sample <- c(8, 16, 7, 10, 9, 13)
+field_1_distribution <- rnorm(6, mean = mean(field_1_sample), sd = sd(field_1_sample))
+
+field_2_sample <- c(12, 16, 18, 14, 19, 12)
+field_2_distribution <- rnorm(6, mean = mean(field_2_sample), sd = sd(field_2_sample))
+
+t.test(field_1_distribution, field_2_distribution, var.equal = FALSE)
+
+```
+
+# Group Testing
+
+```{r}
+field_1_total <- c()
+field_1_total_distribution <- rnorm(TotalNumber, mean = mean(field_1_total), sd = sd(field_1_total))
+
+field_2_total <- c()
+field_2_total_distribution <- rnorm( TotalNumber, mean = mean(field_2_total), sd = sd(field_2_total))
+```
+
