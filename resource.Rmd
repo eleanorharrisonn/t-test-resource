@@ -26,10 +26,12 @@ t.test(field_1_distribution, field_2_distribution, var.equal = FALSE)
 # Group Testing
 
 ```{r}
-field_1_total <- c()
-field_1_total_distribution <- rnorm(TotalNumber, mean = mean(field_1_total), sd = sd(field_1_total))
+field_1_total <- c(ALLVALUESSUBMITTED)
+field_1_total_distribution <- rnorm(TOTALNUMBER, mean = mean(field_1_total), sd = sd(field_1_total))
 
-field_2_total <- c()
-field_2_total_distribution <- rnorm( TotalNumber, mean = mean(field_2_total), sd = sd(field_2_total))
+field_2_total <- c(ALLVALUESSUBMITTED)
+field_2_total_distribution <- rnorm(TOTALNUMBER, mean = mean(field_2_total), sd = sd(field_2_total))
+
+t.test(field_1_total_distribution, field_2_total_distribution, var.equal = FALSE)
 ```
 
